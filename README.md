@@ -10,7 +10,10 @@ we have also try to validatte existing or new user using mongodb
 
 
 ## Run-the-program
-npm run dev
+npm start
 
 ## Prerequisite
 Nodejs in local machine
+# changes to Made before running in your local machine
+its routes->users.js has to add  email id and password from whom you want to send your user reset link
+also change config->keyjs> Mongouri with your mongodb database uri

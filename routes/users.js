@@ -12,8 +12,8 @@ const User=require('../models/User');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'aryanbasu005@gmail.com',
-      pass: 'Qwerty1234@00'
+      user: 'your email address',
+      pass: 'your email adress password'
     }
   });
 
@@ -121,7 +121,7 @@ router.post('/passwordreset',function(req,res){
        var token=jwt.encode(payload,secret);
 
        var mailOptions = {
-  from: 'aryanbasu005@gmail.com',
+  from: 'your email address',
   to: `${payload.email}`,
   subject: ' reset link',
   html:'<a href="https://login-validation.herokuapp.com/users/resetpassword/' + payload.id + '/' + token + '">Reset password</a>'

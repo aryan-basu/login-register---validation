@@ -121,10 +121,10 @@ router.post('/passwordreset',function(req,res){
        var token=jwt.encode(payload,secret);
 
        var mailOptions = {
-  from: 'aryanbasu005@gmail.com',
+  from: 'pranat.singh.31@gmail.com',
   to: `${payload.email}`,
   subject: ' reset link',
-  html:'<a href="https://loginauthenticationvalidation.herokuapp.com/users/resetpassword/' + payload.id + '/' + token + '">Reset password</a>'
+  html:'<a href="https://login-validation.herokuapp.com/users/resetpassword/' + payload.id + '/' + token + '">Reset password</a>'
 };
 
 transporter.sendMail(mailOptions, function(error, info){
